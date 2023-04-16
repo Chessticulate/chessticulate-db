@@ -9,14 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   update:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Updating database
       uses: appleboy/ssh-action@master
@@ -33,5 +29,5 @@ jobs:
           dropdb chessticulate_dev
           createdb chessticulate_dev
           psql -a -d chessticulate_dev -f schema.sql
-          #psql -a -d chessticulate_dev -f test_data.sql
+          psql -a -d chessticulate_dev -f test_data.sql
 
