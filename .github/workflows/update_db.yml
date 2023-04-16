@@ -29,5 +29,5 @@ jobs:
           dropdb chessticulate_dev
           createdb chessticulate_dev
           psql -a -d chessticulate_dev -f schema.sql
-          psql -a -d chessticulate_dev -f test_data.sql
+          psql -a -d chessticulate_dev -f testdata.sql
 
