@@ -18,7 +18,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Updating website.
+    - name: Updating database
       uses: appleboy/ssh-action@master
       with:
         host: chess.krgdev.xyz
